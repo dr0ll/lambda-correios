@@ -10,19 +10,19 @@ namespace Tests
 {
     public class DefaultControllerTests
     {
-        private readonly DefaultController _controller;
+        // private readonly DefaultController _controller;
 
-        public DefaultControllerTests()
-        {
-            _controller = new DefaultController();
-        }
+        // public DefaultControllerTests()
+        // {
+        //     _controller = new DefaultController();
+        // }
 
-        [Fact]
-        public void ShouldPassGetValues()
-        {
-            var values = _controller.Get();
-            values.Should().NotBeNullOrEmpty();
-            values.Count().Should().Be(2);
-        }
+        // [Fact]
+        // public void ShouldPassGetValues()
+        // {
+        //     var values = _controller.Get();
+        //     values.Should().NotBeNullOrEmpty();
+        //     values.Count().Should().Be(2);
+        // }
     }
 }
