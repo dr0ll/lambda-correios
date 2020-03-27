@@ -19,6 +19,6 @@ phases:
 artifacts:
   files:
     - outputSamTemplate.yml
-    - ../../template-params.json
+    - ../template-params.json
   discard-paths: yes
   base-directory: Api
