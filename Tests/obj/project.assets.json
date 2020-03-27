@@ -15555,11 +15555,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\serverless-templates\\Templates\\NetCoreProject\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\serverless-templates\\Templates\\NetCoreProject\\Tests\\Tests.csproj",
+      "projectPath": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\serverless-templates\\Templates\\NetCoreProject\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15582,8 +15582,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\DELL\\source\\repos\\serverless-templates\\Templates\\NetCoreProject\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\DELL\\source\\repos\\serverless-templates\\Templates\\NetCoreProject\\Api\\Api.csproj"
+            "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Api\\Api.csproj": {
+              "projectPath": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Api\\Api.csproj"
             }
           }
         }
