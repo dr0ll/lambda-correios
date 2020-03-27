@@ -1,0 +1,24 @@
+﻿version: 0.2
+phases:
+    install:
+      commands:
+        - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+        - sudo apt-get install -y nodejs
+    pre_build:
+        commands:
+        - dotnet test Tests/Tests.csproj
+    build:
+        commands:
+        - node transform-template.js
+        - dotnet publish Api/Api.csproj -o bin/Release/netcoreapp2.1/publish
+        - ls
+        - cd Api
+        - aws cloudformation package --template-file serverless.template --s3-bucket $ArtifactBucket --output-template-file outputSamTemplate.yml
+        - ls
+        
+artifacts:
+  files:
+    - outputSamTemplate.yml
+    - ../../template-params.json
+  discard-paths: yes
+  base-directory: Api
