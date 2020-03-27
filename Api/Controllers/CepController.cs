@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ewcorreios.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/correios/[controller]")]
     [ApiController]
     public class CepController : ControllerBase
     {
