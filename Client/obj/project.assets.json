@@ -735,11 +735,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\lambda-correios\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\DELL\\source\\repos\\lambda-correios\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\serverless-correios\\Client\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\source\\repos\\lambda-correios\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
