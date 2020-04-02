@@ -6,19 +6,27 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using WSCorreios;
+using System.Collections;
+using ewcorreios.Models;
 
 namespace ewcorreios
 {
+
     public class ConsultaCepModel
     {
+
         public static (string, bool) ConsultaCorreios(string cep)
         {
             try
             {
                 AtendeClienteClient ws = new AtendeClienteClient();
                 enderecoERP response = ws.consultaCEPAsync(cep).GetAwaiter().GetResult().@return;
+
+
+                string ibge = IBGE.RetornaIdMunicipioIBGE(response.cidade, response.uf);
+
+
 
                 object retorno = new
                 {
@@ -29,12 +37,13 @@ namespace ewcorreios
                     localidade = response.cidade,
                     uf = response.uf,
                     unidade = response.unidadesPostagem,
+                    ibge = ibge
                 };
 
                 return (JsonConvert.SerializeObject(retorno), true);
 
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
                 object msg = new { msg = "CEP Inválido" };
                 return (JsonConvert.SerializeObject(msg), false);
@@ -65,7 +74,7 @@ namespace ewcorreios
                 while (cont > 0);
                 string body = sb.ToString();
                 dynamic bodyJson = JsonConvert.DeserializeObject(body);
-                if (bodyJson["erro"]) throw new System.Exception("CEP Inválido");
+                if (bodyJson["erro"] != null) throw new System.Exception("CEP Inválido");
 
 
 
